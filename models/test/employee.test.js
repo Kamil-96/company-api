@@ -11,9 +11,7 @@ describe('Employee', () => {
     const emp = new Employee({});
 
     emp.validate(err => {
-      expect(err.errors.firstName).to.exist;
-      expect(err.errors.lastName).to.exist;
-      expect(err.errors.department).to.exist;
+      expect(err).to.exist;
     });
   });
 
